@@ -39,7 +39,7 @@ def modules():
                 except Exception as error:
                     pass
     
-print("Проверка модулей.\n")
+print("Проверка модулей...\n")
 modules()
 
 import os, sys, time, uuid
@@ -49,7 +49,7 @@ from getpass import getpass
 
 print("Проверка модулей прошла успешно.\n")
 
-print("Поиск почт\n")
+print("Поиск почт...\n")
 
 p = str(os.getcwd())
 
