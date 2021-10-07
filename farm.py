@@ -48,8 +48,10 @@ from threading import Thread
 from getpass import getpass
 
 print("Проверка модулей прошла успешно.\n")
+time.sleep(5)
 
 print("Поиск почт\n")
+time.sleep(5)
 
 p = str(os.getcwd())
 
