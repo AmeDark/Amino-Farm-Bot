@@ -52,8 +52,6 @@ def work():
 
 Thread(target = work).start()
 
-time.sleep(10)
-os.system("rm {}.py".format(name))
 input()
 ```
 ___
