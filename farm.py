@@ -62,8 +62,10 @@ while True:
     try:
         file = find("emails.txt", p)
         if p == "/":
-            print("Файл emails.txt не найден.")
-            exit()
+            print("Файл emails.txt не найден.\n")
+            
+            while True:
+                input("Создайте файл emails.txt с Вашими почтами")
 
         if file == None: x == 1
         break
