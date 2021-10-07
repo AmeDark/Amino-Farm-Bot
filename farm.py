@@ -65,7 +65,7 @@ while True:
             print("Файл emails.txt не найден.\n")
             
             while True:
-                input("Создайте файл emails.txt с Вашими почтами")
+                input(">> Создайте файл emails.txt с Вашими почтами <<. \n    >> И перезапустите скрипт <<.")
 
         if file == None: x == 1
         break
