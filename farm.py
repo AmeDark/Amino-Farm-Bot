@@ -49,7 +49,7 @@ from getpass import getpass
 
 print("Проверка модулей прошла успешно.\n")
 
-import os, json
+print("Поиск почт\n")
 
 p = str(os.getcwd())
 
@@ -61,6 +61,10 @@ def find(name, path):
 while True:          
     try:
         file = find("emails.txt", p)
+        if p == "/":
+            print("Файл emails.txt не найден.")
+            exit()
+
         if file == None: x == 1
         break
        
@@ -71,6 +75,8 @@ while True:
    	         break
    	        
    	     p = p[0: -1]
+
+print("Файл найден.\nПуть: {}.\n".format(file))
 
 client = aminofix.Client()
 req = client.get_from_code(input("Link for blog >> ")).json["extensions"]["linkInfo"]
