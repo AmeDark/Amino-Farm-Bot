@@ -71,8 +71,6 @@ while True:
    	         break
    	        
    	     p = p[0: -1]
-   	    
-print(file)
 
 client = aminofix.Client()
 req = client.get_from_code(input("Link for blog >> ")).json["extensions"]["linkInfo"]
