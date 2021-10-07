@@ -39,7 +39,7 @@ def modules():
                 except Exception as error:
                     pass
     
-print("Проверка модулей.")
+print("Проверка модулей.\n")
 modules()
 
 import os, sys, time, uuid
@@ -48,10 +48,8 @@ from threading import Thread
 from getpass import getpass
 
 print("Проверка модулей прошла успешно.\n")
-time.sleep(5)
 
 print("Поиск почт\n")
-time.sleep(2)
 
 p = str(os.getcwd())
 
@@ -79,7 +77,6 @@ while True:
    	     p = p[0: -1]
 
 print("Файл найден.\nПуть: {}.\n".format(file))
-time.sleep(5)
 
 client = aminofix.Client()
 req = client.get_from_code(input("Link for blog >> ")).json["extensions"]["linkInfo"]
