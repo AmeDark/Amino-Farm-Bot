@@ -39,7 +39,7 @@ def modules():
                 except Exception as error:
                     pass
     
-print("Проверка модулей.\n")
+print("Проверка модулей.")
 modules()
 
 import os, sys, time, uuid
