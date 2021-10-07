@@ -49,6 +49,31 @@ from getpass import getpass
 
 print("Проверка модулей прошла успешно.\n")
 
+import os, json
+
+p = str(os.getcwd())
+
+def find(name, path):
+    for root, dirs, files in os.walk(path):
+        if name in files:
+            return os.path.join(root, name)
+
+while True:          
+    try:
+        file = find("emails.txt", p)
+        if file == None: x == 1
+        break
+       
+    except:
+        p = p[0: -1]
+        while True:
+   	     if p[-1] == "/":
+   	         break
+   	        
+   	     p = p[0: -1]
+   	    
+print(file)
+
 client = aminofix.Client()
 req = client.get_from_code(input("Link for blog >> ")).json["extensions"]["linkInfo"]
 print()
@@ -59,7 +84,7 @@ blog_id = req["objectId"]
 password = getpass()
 print()
 
-for email in open("emails.txt", "r").read().split():
+for email in open(file, "r").read().split():
     client = samino.Client(uuid.uuid4())
     
     client.login(email = email, password = password)
@@ -81,7 +106,7 @@ time.sleep(5)
 os.system("mkdir meow")
 
 x = 1
-for email in open("emails.txt", "r").read().split():
+for email in open(file, "r").read().split():
     open("meow/{}.py".format(x), "w").write("""import os
 import aminofix
     
