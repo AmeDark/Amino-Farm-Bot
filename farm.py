@@ -1,5 +1,3 @@
-print("Created by Ame.\n")
-
 def modules():
     import os
     import time
